@@ -1,7 +1,9 @@
-package com.codeart.tangdi.catfat;
+package com.codeart.tangdi.catfat.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.codeart.tangdi.catfat.R;
 
 public class MainActivity extends AppCompatActivity {
 
