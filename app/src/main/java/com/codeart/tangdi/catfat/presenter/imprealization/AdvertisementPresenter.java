@@ -18,4 +18,9 @@ public class AdvertisementPresenter implements IAdvertisementPersenter {
         mView = view;
         mModel = model;
     }
+
+    @Override
+    public void LoadingAdv() {
+
+    }
 }

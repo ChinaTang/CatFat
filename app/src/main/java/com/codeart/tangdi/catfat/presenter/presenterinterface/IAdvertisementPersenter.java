@@ -5,5 +5,5 @@ package com.codeart.tangdi.catfat.presenter.presenterinterface;
  */
 
 public interface IAdvertisementPersenter {
-
+    public void LoadingAdv();
 }
