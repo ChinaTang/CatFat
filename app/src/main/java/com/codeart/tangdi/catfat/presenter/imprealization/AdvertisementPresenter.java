@@ -21,6 +21,5 @@ public class AdvertisementPresenter implements IAdvertisementPersenter {
 
     @Override
     public void LoadingAdv() {
-
     }
 }

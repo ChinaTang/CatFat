@@ -1,9 +1,11 @@
 package com.codeart.tangdi.catfat.module;
 
+import com.android.volley.RequestQueue;
 import com.codeart.tangdi.catfat.activity.impview.IadvertisementView;
 import com.codeart.tangdi.catfat.annotation.ActivityScope;
 import com.codeart.tangdi.catfat.model.AdvertisementModel;
 import com.codeart.tangdi.catfat.model.impmodel.IadvertisementModel;
+import com.codeart.tangdi.catfat.netrequest.VolleyRequest;
 import com.codeart.tangdi.catfat.presenter.imprealization.AdvertisementPresenter;
 import com.codeart.tangdi.catfat.presenter.presenterinterface.IAdvertisementPersenter;
 
@@ -31,8 +33,8 @@ public class AdvertisementModule {
 
     @ActivityScope
     @Provides
-    public IadvertisementModel provideAdvertisementModel(){
-        return new AdvertisementModel();
+    public IadvertisementModel provideAdvertisementModel(RequestQueue requestQueue, VolleyRequest volleyRequest){
+        return new AdvertisementModel(requestQueue, volleyRequest);
     }
 
     @ActivityScope
