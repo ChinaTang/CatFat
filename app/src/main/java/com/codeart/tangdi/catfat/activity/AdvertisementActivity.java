@@ -31,6 +31,7 @@ public class AdvertisementActivity extends BaseActivity implements Iadvertisemen
     public void onCreate(Bundle SaveInstanceBundle){
         super.onCreate(SaveInstanceBundle);
         setContentView(R.layout.adviertisement_activity);
+        mPersenter.LoadingAdv(adv);
     }
 
     @Override
