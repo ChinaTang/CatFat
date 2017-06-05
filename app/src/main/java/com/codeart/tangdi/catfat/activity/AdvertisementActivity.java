@@ -15,6 +15,7 @@ import com.codeart.tangdi.catfat.presenter.presenterinterface.IAdvertisementPers
 import javax.inject.Inject;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Administrator on 2017/6/2.
@@ -31,6 +32,7 @@ public class AdvertisementActivity extends BaseActivity implements Iadvertisemen
     public void onCreate(Bundle SaveInstanceBundle){
         super.onCreate(SaveInstanceBundle);
         setContentView(R.layout.adviertisement_activity);
+        ButterKnife.bind(this);
         mPersenter.LoadingAdv(adv);
     }
 

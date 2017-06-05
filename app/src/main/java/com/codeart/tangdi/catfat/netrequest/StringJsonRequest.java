@@ -35,6 +35,12 @@ public class StringJsonRequest extends Request<JSONObject> {
         mMap = map;
     }
 
+    public StringJsonRequest(String url, Response.Listener<JSONObject> listener,
+                             Response.ErrorListener errorListener){
+        super(Method.GET, url, errorListener);
+        mListener = listener;
+    }
+
 
     @Override
     protected Map<String, String> getParams() throws AuthFailureError {
