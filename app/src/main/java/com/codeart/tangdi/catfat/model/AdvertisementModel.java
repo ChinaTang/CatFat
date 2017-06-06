@@ -3,15 +3,10 @@ package com.codeart.tangdi.catfat.model;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
-import android.widget.ImageView;
-import android.widget.Scroller;
 
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.codeart.tangdi.catfat.model.impmodel.IadvertisementModel;
 import com.codeart.tangdi.catfat.netdata.BannerData;
 import com.codeart.tangdi.catfat.netrequest.NetURL;
@@ -34,10 +29,6 @@ public class AdvertisementModel implements IadvertisementModel {
     private RequestQueue mRequestQueue;
 
     private VolleyRequest mVolleyRequest;
-
-    private ImageRequest mImageRequest;
-
-    private JsonObjectRequest jsonObjectRequest;
 
     private StringJsonRequest stringJsonRequest;
 
