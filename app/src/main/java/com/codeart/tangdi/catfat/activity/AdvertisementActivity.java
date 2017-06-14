@@ -1,6 +1,5 @@
 package com.codeart.tangdi.catfat.activity;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +30,7 @@ public class AdvertisementActivity extends BaseActivity implements Iadvertisemen
 
     @Inject
     IAdvertisementPersenter mPersenter;
+
 
     @BindView(R.id.adv)ImageView adv;
     @BindView(R.id.jump_adv)TextView jump_adv;
@@ -89,8 +89,8 @@ public class AdvertisementActivity extends BaseActivity implements Iadvertisemen
 
     private void jumpActivity(){
         mTimer.cancel();
-        Intent intent = new Intent(AdvertisementActivity.this, MainActivity.class);
-        startActivity(intent);
+       // Intent intent = new Intent(AdvertisementActivity.this, MainActivity.class);
+        //startActivity(intent);
         finish();
     }
 }

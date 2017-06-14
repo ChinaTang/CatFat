@@ -3,11 +3,9 @@ package com.codeart.tangdi.catfat.activity.impview;
 import android.graphics.Bitmap;
 
 /**
- * Created by Administrator on 2017/6/2.
+ * Created by Administrator on 2017/6/14.
  */
 
 public interface IadvertisementView {
-
-    public void showAdv(Bitmap bitmap);
-
+    void showAdv(Bitmap bitmap);
 }
