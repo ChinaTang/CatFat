@@ -1,5 +1,6 @@
 package com.codeart.tangdi.catfat.activity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -32,8 +33,12 @@ public class AdvertisementActivity extends BaseActivity implements Iadvertisemen
     IAdvertisementPersenter mPersenter;
 
 
-    @BindView(R.id.adv)ImageView adv;
-    @BindView(R.id.jump_adv)TextView jump_adv;
+    //@BindView(R.id.adv)ImageView adv;
+    //@BindView(R.id.jump_adv)TextView jump_adv;
+
+    private TextView jump_adv;
+
+    private ImageView adv;
 
     private int count = 5;
 
@@ -60,7 +65,9 @@ public class AdvertisementActivity extends BaseActivity implements Iadvertisemen
         super.onCreate(SaveInstanceBundle);
         setContentView(R.layout.adviertisement_activity);
         initDate();
-        ButterKnife.bind(this);
+        //ButterKnife.bind(this);
+        jump_adv = (TextView)findViewById(R.id.jump_adv);
+        adv = (ImageView)findViewById(R.id.adv);
         mPersenter.LoadingAdv(adv);
         jump_adv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,8 +96,8 @@ public class AdvertisementActivity extends BaseActivity implements Iadvertisemen
 
     private void jumpActivity(){
         mTimer.cancel();
-       // Intent intent = new Intent(AdvertisementActivity.this, MainActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(AdvertisementActivity.this, MainActivity.class);
+        startActivity(intent);
         finish();
     }
 }
