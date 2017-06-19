@@ -2,7 +2,6 @@ package com.codeart.tangdi.catfat.model;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -77,7 +76,6 @@ public class AdvertisementModel implements IadvertisementModel {
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            loadingImageResult.LoadingFault(error.getMessage());
                         }
                     }, null);
                     mRequestQueue.add(stringBinaryRequest);
@@ -86,7 +84,7 @@ public class AdvertisementModel implements IadvertisementModel {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("", "");
+                loadingImageResult.LoadingFault(error.getMessage());
             }
         }, request);
         mRequestQueue.add(stringJsonRequest);

@@ -20,9 +20,6 @@ import java.util.TimerTask;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 /**
  * Created by Administrator on 2017/6/2.
  */
@@ -92,6 +89,11 @@ public class AdvertisementActivity extends BaseActivity implements Iadvertisemen
     public void showAdv(Bitmap bitmap) {
         adv.setImageBitmap(bitmap);
         mTimer.schedule(mTimerTask, 0, 1000);
+    }
+
+    @Override
+    public void showfail() {
+        jumpActivity();
     }
 
     private void jumpActivity(){

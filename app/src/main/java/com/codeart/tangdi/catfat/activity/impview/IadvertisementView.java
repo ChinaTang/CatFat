@@ -8,4 +8,5 @@ import android.graphics.Bitmap;
 
 public interface IadvertisementView {
     void showAdv(Bitmap bitmap);
+    void showfail();
 }

@@ -35,6 +35,6 @@ public class AdvertisementPresenter implements IAdvertisementPersenter , Adverti
 
     @Override
     public void LoadingFault(String msg) {
-
+        mView.showfail();
     }
 }
